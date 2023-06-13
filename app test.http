@@ -1,0 +1,29 @@
+POST http://localhost:7860/run/prediccion/
+Content-Type: application/json
+
+{
+  "data": [18, "pending", "True", "card", "JCB 16 digit",
+    "Citizens First Banks", 18, false,"com", "yahoo",
+    6.0, "yes"]
+}
+
+### Fraude
+POST http://localhost:7860/run/prediccion/
+Content-Type: application/json
+
+{
+  "data": [
+    26.0,
+    "fulfilled",
+    "True",
+    "bitcoin",
+    "VISA 16 digit",
+    "Solace Banks",
+    26,
+    "False",
+    "com",
+    "yahoo",
+    6.0,
+    "no"
+    ]
+}
