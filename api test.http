@@ -1,0 +1,40 @@
+GET http://localhost:7860/
+
+### No Fraude
+POST http://localhost:7860/prediccion/
+Content-Type: application/json
+
+{
+  "orderAmount": 18,
+  "orderState": "pending",
+  "paymentMethodRegistrationFailure": "True",
+  "paymentMethodType": "card",
+  "paymentMethodProvider": "JCB 16 digit",
+  "paymentMethodIssuer": "Citizens First Banks",
+  "transactionAmount": 18,
+  "transactionFailed": false,
+  "emailDomain": "com",
+  "emailProvider": "yahoo",
+  "customerIPAddressVersion": 6.0,
+  "sameCity": "yes"
+}
+
+
+### Fraude
+POST http://localhost:7860/prediccion/
+Content-Type: application/json
+
+{
+  "orderAmount" : 26.0,
+    "orderState" : "fulfilled",
+    "paymentMethodRegistrationFailure" : "True",
+    "paymentMethodType" : "bitcoin",
+    "paymentMethodProvider" : "VISA 16 digit",
+    "paymentMethodIssuer" : "Solace Banks",
+    "transactionAmount" : 26,
+    "transactionFailed" : false,
+    "emailDomain" : "com",
+    "emailProvider" : "yahoo",
+    "customerIPAddressVersion": 6.0,
+    "sameCity" : "no"
+}
