@@ -125,6 +125,7 @@ celerybeat.pid
 env/
 venv/
 api_venv/
+gradio_venv/
 ENV/
 env.bak/
 venv.bak/
