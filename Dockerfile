@@ -4,7 +4,7 @@ WORKDIR /app
 COPY requirements.txt ./
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-COPY ./api /app/api
-COPY ./model /app/model
+COPY ./api ./api
+COPY ./model ./model
 
-CMD ["uvicorn", "api:app", "--host=0.0.0.0", "--port=5000"]
+CMD ["uvicorn", "api.api:app", "--host=0.0.0.0", "--port=80"]
