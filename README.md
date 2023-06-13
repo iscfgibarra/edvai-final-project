@@ -46,6 +46,15 @@ If you want to use the app, you need to run the following command:
 python app.py
 ```
 
+## Hunging Face
+
+The public app is available in the following link:
+
+https://huggingface.co/spaces/fgibarra/fraud-prevention
+
 ## Deploy
+
+
+
 
 
