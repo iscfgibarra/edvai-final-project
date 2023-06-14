@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  mlfloweb:
+    restart: always
+    build: ./mlflow
+    image: fgibarra/mlfloweb:0.1.0
+    container_name: mlfloweb
+    ports:
+      - "5000:5000"
+    environment:
+      - AWS_ACCESS_KEY_ID=${MLFLOW_AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${MLFLOW_AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=${MLFLOW_AWS_DEFAULT_REGION}
+    command: mlflow server --backend-store-uri postgresql+psycopg2://${MLFLOW_PG_USER}:${MLFLOW_PG_PASSWORD}@${MLFLOW_PG_SERVER}:5432/${MLFLOW_PG_DATABASE} --default-artifact-root s3://${MLFLOW_S3_BUCKET}/mlflow/ --host 0.0.0.0

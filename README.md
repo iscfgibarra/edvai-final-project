@@ -64,6 +64,33 @@ docker pull fgibarra/edvai-final:0.1.0
 docker run -d -p 80:80 fgibarra/edvai-final:0.1.0
 ```
 
+## MLFLow
+
+For use local MLFlow.
+
+### Previous Steps
+
+- Create AWS Account
+- Generate ACCESS KEY and SECRET ACCESS KEY
+- You need to have a postgresql database server
+- Create a postgresql database
+- Set the following environment variables:
+    - MLFLOW_AWS_ACCESS_KEY_ID
+    - MLFLOW_AWS_SECRET_ACCESS_KEY
+    - MLFLOW_AWS_DEFAULT_REGION
+    - MLFLOW_PG_USER
+    - MLFLOW_PG_PASSWORD
+    - MLFLOW_PG_SERVER
+    - MLFLOW_PG_DATABASE
+    - MLFLOW_S3_BUCKET 
+
+### Run MLFlow
+
+You need to run the following command:
+
+```bash
+docker-compose up -d
+```
 
 
 
