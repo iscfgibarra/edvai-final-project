@@ -54,6 +54,17 @@ https://huggingface.co/spaces/fgibarra/fraud-prevention
 
 ## Deploy
 
+For the deploy of the api, recommended Docker, can use the following command:
+
+```bash
+docker pull fgibarra/edvai-final:0.1.0
+```
+
+```bash
+docker run -d -p 80:80 fgibarra/edvai-final:0.1.0
+```
+
+
 
 
 
