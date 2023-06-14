@@ -71,7 +71,8 @@ For use local MLFlow.
 ### Previous Steps
 
 - Create AWS Account
-- Generate ACCESS KEY and SECRET ACCESS KEY
+- Generate ACCESS KEY and SECRET ACCESS KEY with permissions to S3
+- Create a S3 Bucket 
 - You need to have a postgresql database server
 - Create a postgresql database
 - Set the following environment variables:
